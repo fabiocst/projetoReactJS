@@ -1,23 +1,31 @@
 import logo from './logo.svg';
 import './App.css';
+import Frases from './components/Frases';
+import Produto from './components/Produto';
+
 
 function App() {
+  const nome="Mário";
+  //método para deixar td maiusculo
+  const novo=nome.toUpperCase();
+  const url="https://t.ctcdn.com.br/JlHwiRHyv0mTD7GfRkIlgO6eQX8=/640x360/smart/i257652.jpeg";
+
+  function soma(a,b){
+    return a+b;
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Alterando o JSX</h1>
+      <p>Olá, {nome}</p>
+      <p>Soma:{soma(2,6)}</p>
+      
+      <img src={url} alt="Minha Imagem"/>
+      <Frases/>
+      <Produto
+      nome="Caneca"
+      foto="https://t.ctcdn.com.br/JlHwiRHyv0mTD7GfRkIlgO6eQX8=/640x360/smart/i257652.jpeg"
+      desc="Uma paisagem bonita"
+      />
     </div>
   );
 }
